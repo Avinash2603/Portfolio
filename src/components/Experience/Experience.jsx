@@ -5,44 +5,40 @@ import skills from "../../data/skills.json";
 import history from "../../data/history.json";
 import { getImageUrl } from "../../utils";
 
+// import Accordion from '@mui/material/Accordion';
+// import AccordionDetails from '@mui/material/AccordionDetails';
+// import AccordionSummary from '@mui/material/AccordionSummary';
+
+
 export const Experience = () => {
   return (
     <section className={styles.container} id="experience">
-      <h2 className={styles.title}>Experience</h2>
+      <h2 className={styles.title}>Skills</h2>
       <div className={styles.content}>
         <div className={styles.skills}>
-          {skills.map((skill, id) => {
-            return (
-              <div key={id} className={styles.skill}>
-                <div className={styles.skillImageContainer}>
-                  <img src={getImageUrl(skill.imageSrc)} alt={skill.title} />
-                </div>
-                <p>{skill.title}</p>
-              </div>
-            );
-          })}
+          <div className={styles.subskills}>
+            <h3 className={styles.subtitle}>Pharmaeutical skills:</h3>
+            <ul className={styles.list}>
+              <li>Regulatory Requirment For New Drug Approval</li>
+              <li>Medication Thearpy Managment</li>
+              <li>Medication adherance</li>
+              <li>Pharmacodynanic and Pharmacokinetic</li>
+              <li>Compounding Of Medicines</li>
+            </ul>
+          </div>
+          <div className={styles.subskills}>
+            <h3 className={styles.subtitle}>Technical skills:</h3>
+            <ul className={styles.list}>
+              <li>High Performance Liquid Chromatography</li>
+              <li>High Performance Thin Liquid Chromatography</li>
+              <li>UV Spectroscopy</li>
+              <li>Flourimetry</li>
+              <li>Sonicator</li>
+              <li>Machine's Used In Tablet Manufacturing</li>
+            </ul>
+          </div>
+
         </div>
-        <ul className={styles.history}>
-          {history.map((historyItem, id) => {
-            return (
-              <li key={id} className={styles.historyItem}>
-                <img
-                  src={getImageUrl(historyItem.imageSrc)}
-                  alt={`${historyItem.organisation} Logo`}
-                />
-                <div className={styles.historyItemDetails}>
-                  <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>
-                  <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
-                  <ul>
-                    {historyItem.experiences.map((experience, id) => {
-                      return <li key={id}>{experience}</li>;
-                    })}
-                  </ul>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
       </div>
     </section>
   );

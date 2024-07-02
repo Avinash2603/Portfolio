@@ -2,6 +2,8 @@ import React from "react";
 
 import styles from "./About.module.css";
 import { getImageUrl } from "../../utils";
+import { LuSyringe } from "react-icons/lu";
+import { BsCapsule } from "react-icons/bs";
 
 export const About = () => {
   return (
@@ -15,32 +17,27 @@ export const About = () => {
         />
         <ul className={styles.aboutItems}>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
+            <LuSyringe size={200} className={styles.icons}></LuSyringe>
             <div className={styles.aboutItemText}>
-              <h3>Frontend Developer</h3>
               <p>
-                I'm a frontend developer with experience in building responsive
-                and optimized sites
+                My education journey has been enriched by hand's on experiences in clinical settings,
+                where i have honed my skill in communication, team work, leadership, problem solving. 
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
+            <BsCapsule size={200} className={styles.icons}></BsCapsule>
             <div className={styles.aboutItemText}>
-              <h3>Backend Developer</h3>
               <p>
-                I have experience developing fast and optimised back-end systems
-                and APIs
+                My goal is to become a pharmacist, specializing in oncology, where i can directly impact patients life by optimizing therapeutic outcomes and providing comprehensive medication adherence.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
+            <LuSyringe size={200} className={styles.icons}></LuSyringe>
             <div className={styles.aboutItemText}>
-              <h3>UI Designer</h3>
               <p>
-                I have designed multiple landing pages and have created design
-                systems as well
+                I strive to make a meaningful diffrence in healthcare, ensuring that every patient receive the highest standard of pharmaceutical care. 
               </p>
             </div>
           </li>
